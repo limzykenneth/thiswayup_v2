@@ -1,0 +1,412 @@
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('cooperhewitt-bold-webfont.woff2') format('woff2'),
+         url('cooperhewitt-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('cooperhewitt-medium-webfont.woff2') format('woff2'),
+         url('cooperhewitt-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* default settings (layout only, NOT for typographic details) */
+
+a:link{
+    text-decoration:none;
+    color:#cc0000;
+}
+
+a:visited{
+    text-decoration:none;
+    color:#cc0000;
+}
+
+body{
+    background-color:#fff;
+    font-family: "Cooper Hewitt", "Helvetica", sans-serif;
+    line-height: 1.5em;
+    overflow: hidden;
+}
+
+
+/* default typography presets */
+
+
+h1{
+    font-family: "Cooper Hewitt", "Helvetica", sans-serif;
+    font-size: 4em;
+}
+h2{
+    font-family: "Cooper Hewitt", "Helvetica", sans-serif;
+    font-size:3em;
+}
+h3{
+    font-size:2em;
+}
+h4{
+    font-size:1.5em;
+}
+h5{
+    font-size:1em;
+}
+h6{
+    font-size:0.5em;
+}
+p{
+
+}
+
+div{
+}
+
+
+
+/* custom modifications */
+.nameList{
+    position:relative;
+    width:20%;
+    float:left;
+    font-size:0.7em;
+    line-height: 1.5em;
+}
+#page-content1 .nameList, #page-content2 .nameList{
+    -webkit-column-count:2;
+}
+#page-content2 #nameList1{
+    -webkit-column-count:1;
+}
+#nameList1{
+    top:0em;
+    left:0em;
+    width:50%;
+    height:50%;
+}
+#nameList2{
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top:0em;
+    right:0em;
+    width:50%;
+    height:50%;
+}
+#nameList3{
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    bottom:0em;
+    right:0em;
+    width:50%;
+    height:50%;
+}
+#nameList4{
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+    bottom:0em;
+    left:0em;
+    width:50%;
+    height:50%;
+}
+
+/* transform test */
+.page-content{
+    position:relative;
+    top:30px;
+    overflow:hidden;
+    height:90%;
+    width:90%;
+    margin:0 auto;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    z-index: 1;
+    padding:10px;
+}
+
+#mainLogo{
+    width:100%;
+    height:100%;
+}
+
+.header2{
+    font-size:1.5em;
+    font-weight: bold;
+    line-height:1.2em;
+}
+.larger{
+    font-size: 1.4em;
+    line-height: 1.35em;
+}
+
+.unfolded{
+    display:none;
+}
+
+.navigation{
+    z-index:2;
+    opacity: 0.3;
+}
+.navy{
+    color:#000066;
+}
+.red{
+    color:#cc0000;
+}
+.upsidedowntext{
+    transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    text-decoration: underline;
+    font-weight:bold;
+}
+#page-content5 .large{
+    height:75px;
+    width:auto;
+    padding:5px;
+}
+#page-content5 .medium{
+    height:50px;
+    width:auto;
+    padding:5px;
+}
+
+/* By Jordan Woodage */
+.it, span, .cube .side {
+    display: inline-block;
+}
+.show {
+    opacity: 1 !important;
+    filter: alpha(opacity=100);
+}
+.hide {
+    opacity: 0 !important;
+    filter: alpha(opacity=0);
+}
+* {
+    box-sizing: border-box;
+}
+.main {
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+}
+.cube, .cube .side {
+    postion:absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: inset 0 0 0 20px #000;
+    /*  0 0 0px 1px #ff0000; */
+
+    -moz-box-shadow: inset 0 0 0 20px #000;
+    box-shadow: inset 0 0 0 20px #000;
+    /* , 0 0 0px 1px #334455; */
+
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    /*background: url(http://www.upwaythis.com/images/logo-2.png) #fff;
+    background-size: 90%;
+    background-position: 50% 50%;*/
+}
+.cube .side {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cube .top {
+    top: -500px;
+    -webkit-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    background: url(http://www.upwaythis.com/images/logo-3.png) #fff;
+    background-size: 90%;
+    background-position: 50% 50%;
+}
+.cube .left {
+    left: -500px;
+    -webkit-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+    -webkit-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    background: #fff;
+    background-size: 90%;
+    background-position: 50% 50%;
+}
+.cube .right {
+    left: 500px;
+    -webkit-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transform-origin: 0% 50%;
+    -ms-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    background: #fff;
+    background-size: 90%;
+    background-position: 50% 50%;
+}
+.cube .bottom {
+    top: 500px;
+    -webkit-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    background: url(http://www.upwaythis.com/images/logo-3.png) #fff;
+    background-size: 90%;
+    background-position: 50% 50%;
+}
+.cube .bottom .back {
+    top: 500px;
+    -webkit-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    background: url(http://www.upwaythis.com/images/logo-4.png) #fff;
+    background-size: 90%;
+    background-position: 50% 50%;
+}
+/* Slides ------------------------------------------------------------------ */
+
+.wrap {
+    -webkit-perspective: 800px;
+    perspective: 800px;
+    -webkit-perspective-origin: 50vw 30vh;
+    perspective-origin: 50vw 30vh;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.cube {
+       -moz-transform: translate3d(100%, 100%, -1000px);
+    -webkit-transform: translate3d(100%, 100%, -1000px);
+            transform: translate3d(100%, 100%, -1000px);
+    -webkit-transform-origin: 50% 50% -250px;
+    background: url(http://www.upwaythis.com/images/logo-2.png) #fff;
+    background-size: 90%;
+    background-position: 50% 50%;
+    cursor:pointer;
+}
+.cube.rotate {
+    -webkit-animation: rotate-cube-slow 8s linear infinite;
+    animation: rotate-cube-slow 8s linear infinite;
+}
+.cube .flat {
+    -webkit-transition: all 1.3s linear;
+    transition: all 1.3s ease-in;
+}
+.cube .top.flat {
+    -webkit-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    top: -480px;
+}
+.cube .left.flat {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    left: -480px;
+}
+.cube .right.flat {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    left: 480px;
+}
+.cube .bottom.flat {
+    -webkit-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    top: 480px;
+}
+.cube .back.flat {
+    -webkit-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    top: 480px;
+}
+.cube.flat {
+    box-shadow: inset 0 0 0 20px #000;
+    background-size: 40%;
+    background-position: 10% 10%;
+    background-repeat: no-repeat;
+}
+.cube .flat {
+    background: #fff;
+}
+.return-flat {
+    -webkit-transform: rotateX(0deg), rotateY(0deg);
+            transform: rotateX(0deg), rotateY(0deg);
+    -webkit-transition: all 2.3s ease-in;
+            transition: all 2.3s ease-in;
+}
+.flat .rotate-button {
+    background: url('http://designerken.be/poppingup3/images/rotatebutton.png');
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    top: 45%;
+    left: 45%;
+    background-size: 80%;
+    position: absolute;
+    cursor: pointer;
+}
+.rotate-button: :hover {} .flat .arrow-left, .flat .arrow-right, .flat .arrow-down, .flat .arrow-up {
+    background: url('http://designerken.be/poppingup3/images/arrowbutton.png');
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-position: 42% 100%;
+}
+.arrow-left {
+    top: 45%;
+    left: 10%;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+.arrow-right {
+    top: 44%;
+    right: 10%;
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+}
+.arrow-down {
+    bottom: 10%;
+    left: 46%;
+}
+.arrow-up {
+    top: 10%;
+    left: 45%;
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+
+/* responsive design */
+
+@media
+
